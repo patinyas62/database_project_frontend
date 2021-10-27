@@ -1,0 +1,74 @@
+.NameUser{
+    // margin-top: 10px;
+    display: flex;
+    width: 100%;
+    color: black;
+    z-index: 99;
+    font-size: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+// .bg.i{
+//     display: flex;
+//     flex-direction: column;
+// }
+
+.left.user{
+    margin-top: 0;
+    justify-content: center;
+}
+
+.NameUser.bot{
+    visibility: hidden;
+}
+
+.top_number_email.user{
+    border: 0px solid;
+}
+
+.to_from_user{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 99;
+    width: 50vw;
+    height: 90vh;
+}
+
+.top_user{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 40%;
+    font-size: 50px;
+    border: 10px outset;
+    border-radius: 20px;
+    background-color: #FFFCF8;
+}
+
+.bot_user{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 40%;
+    font-size: 50px;
+    border: 10px outset;
+    border-radius: 20px;
+    background-color: #FFFCF8;
+}
+
+@media only screen and  (max-width: 1200px){
+    .top_user{
+        width: 60vw;
+    }
+
+    .bot_user{
+        width: 60vw;
+    }
+}

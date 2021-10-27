@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {useState} from 'react'
+import { Route, Switch, BrowserRouter as Router,useLocation } from 'react-router-dom'
+import Dashboard from './component/Dahsboard/Dashboard';
+import email from './component/email/email';
+import user_dashboard from './component/User_dashboard/user_dashboard';
+import Navbar from './component/Navbar/Navbar';
+import route from './component/route'
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <div className="App">
+          <Switch>
+            <Route exact path="/" component={email} />
+            <Route path="/dashboard" component={Dashboard}/>
+            <Route path="/user" component={user_dashboard}/>
+          </Switch>
+          
+        </div>
+    </Router>
   );
 }
 
 export default App;
+// location.pathname
