@@ -21,7 +21,7 @@ export default class Dashboard extends Component {
     }
 
     async componentDidMount(){
-        await axios.get(`http://localhost:80/api/year`).then(async res => {
+        await axios.get(`http://34.87.164.128/api/year`).then(async res => {
             const dat = res
             // console.log(dat)
             this.setState({
@@ -33,7 +33,7 @@ export default class Dashboard extends Component {
             most: true,
             choose: 'total_to'
         }
-        await axios.post(`http://localhost:80/api/most_sent`,post).then(async res => {
+        await axios.post(`http://34.87.164.128/api/most_sent`,post).then(async res => {
             const dat = res
             // console.log(dat)
             this.setState({
@@ -41,7 +41,7 @@ export default class Dashboard extends Component {
             })
         })
 
-        await axios.get(`http://localhost:80/api/sent_inbox`).then(async res => {
+        await axios.get(`http://34.87.164.128/api/sent_inbox`).then(async res => {
             const dat = res
             console.log(dat)
             this.setState({
@@ -57,7 +57,7 @@ export default class Dashboard extends Component {
             Number: 'Year',
             data: []
         })
-        await axios.get(`http://localhost:80/api/year`).then(async res => {
+        await axios.get(`http://34.87.164.128/api/year`).then(async res => {
             const dat = res
             // console.log(dat)
             this.setState({
@@ -71,7 +71,7 @@ export default class Dashboard extends Component {
             Number: 'Month of 2001',
             data: []
         })
-        await axios.get(`http://localhost:80/api/month`).then(async res => {
+        await axios.get(`http://34.87.164.128/api/month`).then(async res => {
             const dat = res
             // console.log(dat)
             this.setState({
@@ -89,7 +89,7 @@ export default class Dashboard extends Component {
             most: true,
             choose: this.state.to_check
         }
-        await axios.post(`http://localhost:80/api/most_sent`,post).then(async res => {
+        await axios.post(`http://34.87.164.128/api/most_sent`,post).then(async res => {
             const dat = res
             console.log(dat)
             this.setState({
@@ -107,7 +107,7 @@ export default class Dashboard extends Component {
             most: false,
             choose: this.state.to_check
         }
-        await axios.post(`http://localhost:80/api/most_sent`,post).then(async res => {
+        await axios.post(`http://34.87.164.128/api/most_sent`,post).then(async res => {
             const dat = res
             console.log(dat)
             this.setState({
@@ -123,7 +123,7 @@ export default class Dashboard extends Component {
         var post = {
             userid: this.state.search_input
         }
-        await axios.post(`http://localhost:80/api/most_sent_userid`,post).then(async res => {
+        await axios.post(`http://34.87.164.128/api/most_sent_userid`,post).then(async res => {
             const dat = res
             console.log(dat)
             this.setState({
@@ -155,7 +155,7 @@ export default class Dashboard extends Component {
                 most: x,
                 choose: this.state.to_check
             }
-            await axios.post(`http://localhost:80/api/most_sent`,post).then(async res => {
+            await axios.post(`http://34.87.164.128/api/most_sent`,post).then(async res => {
                 const dat = res
                 console.log(dat)
                 this.setState({
@@ -181,7 +181,7 @@ export default class Dashboard extends Component {
                 most: x,
                 choose: this.state.to_check
             }
-            await axios.post(`http://localhost:80/api/most_sent`,post).then(async res => {
+            await axios.post(`http://34.87.164.128/api/most_sent`,post).then(async res => {
                 const dat = res
                 console.log(dat)
                 this.setState({

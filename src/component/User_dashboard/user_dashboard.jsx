@@ -25,7 +25,7 @@ export default class user_dashboard extends Component {
         this.setState({
             user: localStorage.getItem('user')
         })
-        await axios.post(`http://localhost:80/api/to_inbox_user_year`,{user: localStorage.getItem('user')}).then(async res => {
+        await axios.post(`http://34.87.164.128/api/to_inbox_user_year`,{user: localStorage.getItem('user')}).then(async res => {
             const dat = res
             var i = []
             console.log(dat.data)
@@ -45,7 +45,7 @@ export default class user_dashboard extends Component {
             Number: 'Year',
             data: []
         })
-        await axios.post(`http://localhost:80/api/to_inbox_user_year`,{user: localStorage.getItem('user')}).then(async res => {
+        await axios.post(`http://34.87.164.128/api/to_inbox_user_year`,{user: localStorage.getItem('user')}).then(async res => {
             const dat = res
             // console.log(dat)
             this.setState({
@@ -59,7 +59,7 @@ export default class user_dashboard extends Component {
             Number: 'Month of 2001',
             data: []
         })
-        await axios.post(`http://localhost:80/api/month_inbox_user`,{user: this.state.user}).then(async res => {
+        await axios.post(`http://34.87.164.128/api/month_inbox_user`,{user: this.state.user}).then(async res => {
             const dat = res
             console.log(dat)
             this.setState({
